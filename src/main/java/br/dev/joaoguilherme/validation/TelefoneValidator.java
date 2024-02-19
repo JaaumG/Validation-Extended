@@ -15,7 +15,6 @@ public class TelefoneValidator implements ConstraintValidator<Telefone, String> 
 
     @Override
     public boolean isValid(String telefone, ConstraintValidatorContext context) {
-        if (telefone == null) return true;
-        return telefone.matches(regex);
+        return telefone == null || telefone.matches(regex);
     }
 }

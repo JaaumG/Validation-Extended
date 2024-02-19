@@ -16,7 +16,6 @@ public class NomeValidator implements ConstraintValidator<Nome, String> {
 
     @Override
     public boolean isValid(String nome, ConstraintValidatorContext context) {
-        if (nome == null) return false;
-        return nome.matches(regex);
+        return nome == null || nome.matches(regex);
     }
 }

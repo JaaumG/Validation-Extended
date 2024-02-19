@@ -18,8 +18,7 @@ public class IdadeValidator implements ConstraintValidator<Idade, Temporal> {
 
     @Override
     public boolean isValid(Temporal birthDate, ConstraintValidatorContext context) {
-        if (birthDate == null) return false;
-        return ChronoUnit.YEARS.between(birthDate, LocalDate.now()) >= minAge;
+        return birthDate == null || ChronoUnit.YEARS.between(birthDate, LocalDate.now()) >= minAge;
     }
 
 }
