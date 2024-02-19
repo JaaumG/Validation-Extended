@@ -1,6 +1,6 @@
 package br.dev.joaoguilherme.validation.annotation;
 
-import br.dev.joaoguilherme.validation.IdadeMinimaValidator;
+import br.dev.joaoguilherme.validation.IdadeValidator;
 import jakarta.validation.Constraint;
 import jakarta.validation.Payload;
 
@@ -11,13 +11,13 @@ import java.lang.annotation.Target;
 
 @Target({ElementType.FIELD})
 @Retention(RetentionPolicy.RUNTIME)
-@Constraint(validatedBy = IdadeMinimaValidator.class)
-public @interface IdadeMinima {
+@Constraint(validatedBy = IdadeValidator.class)
+public @interface Idade {
     String message() default "A idade mínima é de %s anos";
 
     Class<?>[] groups() default {};
 
     Class<? extends Payload>[] payload() default {};
 
-    int minAge() default 18;
+    int minAge();
 }

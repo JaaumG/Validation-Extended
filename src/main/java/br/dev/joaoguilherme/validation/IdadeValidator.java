@@ -1,18 +1,18 @@
 package br.dev.joaoguilherme.validation;
 
-import br.dev.joaoguilherme.validation.annotation.IdadeMinima;
+import br.dev.joaoguilherme.validation.annotation.Idade;
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 import java.time.temporal.Temporal;
 
-public class IdadeMinimaValidator implements ConstraintValidator<IdadeMinima, Temporal> {
+public class IdadeValidator implements ConstraintValidator<Idade, Temporal> {
 
     private int minAge;
 
     @Override
-    public void initialize(IdadeMinima constraintAnnotation) {
+    public void initialize(Idade constraintAnnotation) {
         this.minAge = constraintAnnotation.minAge();
     }
 
