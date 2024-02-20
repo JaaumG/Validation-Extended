@@ -3,6 +3,7 @@ package br.dev.joaoguilherme.validation.annotation;
 import br.dev.joaoguilherme.validation.CEPValidator;
 import br.dev.joaoguilherme.validation.annotation.CEP.List;
 import jakarta.validation.Constraint;
+import jakarta.validation.Payload;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.Repeatable;
