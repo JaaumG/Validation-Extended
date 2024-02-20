@@ -1,7 +1,7 @@
 package br.dev.joaoguilherme.validation;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import br.dev.joaoguilherme.validation.annotation.JSON;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
 

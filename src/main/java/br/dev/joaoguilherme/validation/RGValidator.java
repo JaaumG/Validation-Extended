@@ -8,6 +8,7 @@ import jakarta.validation.ConstraintValidatorContext;
 public class RGValidator implements ConstraintValidator<RG, String> {
 
     private String regex;
+
     @Override
     public void initialize(RG constraintAnnotation) {
         regex = constraintAnnotation.regexp();

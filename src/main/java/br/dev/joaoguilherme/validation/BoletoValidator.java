@@ -8,6 +8,7 @@ import jakarta.validation.ConstraintValidatorContext;
 public class BoletoValidator implements ConstraintValidator<Boleto, String> {
 
     private String regex;
+
     @Override
     public void initialize(Boleto constraintAnnotation) {
         regex = constraintAnnotation.regexp();

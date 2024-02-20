@@ -1,7 +1,6 @@
 package br.dev.joaoguilherme.validation.annotation;
 
 import br.dev.joaoguilherme.validation.BoletoValidator;
-import br.dev.joaoguilherme.validation.CEPValidator;
 import br.dev.joaoguilherme.validation.annotation.Boleto.List;
 import jakarta.validation.Constraint;
 
@@ -14,7 +13,7 @@ import static java.lang.annotation.ElementType.*;
 import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
 @Repeatable(List.class)
-@Target({ METHOD, FIELD, ANNOTATION_TYPE, CONSTRUCTOR, PARAMETER, TYPE_USE })
+@Target({METHOD, FIELD, ANNOTATION_TYPE, CONSTRUCTOR, PARAMETER, TYPE_USE})
 @Retention(RUNTIME)
 @Constraint(validatedBy = BoletoValidator.class)
 public @interface Boleto {
@@ -23,7 +22,11 @@ public @interface Boleto {
 
     String regexp() default "(\\d{5}[\\.]\\d{5}[\\s]\\d{5}[\\.]\\d{6}[\\s]\\d{5}[\\.]\\d{6}[\\s]\\d[\\s]\\d{14})|(\\d{47,48})|(\\d{12} \\d{12} \\d{12} \\d{12})";
 
-    @Target({ METHOD, FIELD, ANNOTATION_TYPE, CONSTRUCTOR, PARAMETER, TYPE_USE })
+    Class<?>[] groups() default {};
+
+    Class<? extends Payload>[] payload() default {};
+
+    @Target({METHOD, FIELD, ANNOTATION_TYPE, CONSTRUCTOR, PARAMETER, TYPE_USE})
     @Retention(RUNTIME)
     @Documented
     @interface List {

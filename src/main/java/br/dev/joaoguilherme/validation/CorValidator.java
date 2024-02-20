@@ -8,6 +8,7 @@ import jakarta.validation.ConstraintValidatorContext;
 public class CorValidator implements ConstraintValidator<Cor, String> {
 
     private Cor.TipoCor tipoCor;
+
     @Override
     public void initialize(Cor constraintAnnotation) {
         this.tipoCor = constraintAnnotation.tipo();

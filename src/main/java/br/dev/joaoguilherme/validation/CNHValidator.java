@@ -8,6 +8,7 @@ import jakarta.validation.ConstraintValidatorContext;
 public class CNHValidator implements ConstraintValidator<CNH, String> {
 
     private String regex;
+
     @Override
     public void initialize(CNH constraintAnnotation) {
         regex = constraintAnnotation.regexp();

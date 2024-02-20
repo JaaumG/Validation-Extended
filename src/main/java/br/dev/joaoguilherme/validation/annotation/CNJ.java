@@ -1,6 +1,5 @@
 package br.dev.joaoguilherme.validation.annotation;
 
-import br.dev.joaoguilherme.validation.CEPValidator;
 import br.dev.joaoguilherme.validation.CNJValidator;
 import br.dev.joaoguilherme.validation.annotation.CNJ.List;
 import jakarta.validation.Constraint;
@@ -14,7 +13,7 @@ import static java.lang.annotation.ElementType.*;
 import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
 @Repeatable(List.class)
-@Target({ METHOD, FIELD, ANNOTATION_TYPE, CONSTRUCTOR, PARAMETER, TYPE_USE })
+@Target({METHOD, FIELD, ANNOTATION_TYPE, CONSTRUCTOR, PARAMETER, TYPE_USE})
 @Retention(RUNTIME)
 @Constraint(validatedBy = CNJValidator.class)
 public @interface CNJ {
@@ -23,7 +22,11 @@ public @interface CNJ {
 
     String regexp() default "[0-9]{7}\\-?[0-9]{2}\\.?[0-9]{4}\\.?[4-8]\\.?[0-9]{2}\\.?[0-9]{4}";
 
-    @Target({ METHOD, FIELD, ANNOTATION_TYPE, CONSTRUCTOR, PARAMETER, TYPE_USE })
+    Class<?>[] groups() default {};
+
+    Class<? extends Payload>[] payload() default {};
+
+    @Target({METHOD, FIELD, ANNOTATION_TYPE, CONSTRUCTOR, PARAMETER, TYPE_USE})
     @Retention(RUNTIME)
     @Documented
     @interface List {
