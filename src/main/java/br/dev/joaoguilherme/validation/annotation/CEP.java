@@ -21,7 +21,7 @@ public @interface CEP {
 
     String message() default "CEP inválido";
 
-    String regexp() default "^\\d{5}(-\\d{3})?$";
+    String regexp() default "\\d{5}(-?\\s?\\d{3})";
 
     Class<?>[] groups() default {};
 
