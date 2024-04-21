@@ -1,6 +1,6 @@
 package br.dev.joaoguilherme.validation.annotation;
 
-import br.dev.joaoguilherme.validation.RGValidator;
+import br.dev.joaoguilherme.validation.validators.RGValidator;
 import br.dev.joaoguilherme.validation.annotation.RG.List;
 import jakarta.validation.Constraint;
 import jakarta.validation.Payload;

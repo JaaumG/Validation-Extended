@@ -1,6 +1,6 @@
 package br.dev.joaoguilherme.validation.annotation;
 
-import br.dev.joaoguilherme.validation.JSONValidator;
+import br.dev.joaoguilherme.validation.validators.JSONValidator;
 import br.dev.joaoguilherme.validation.annotation.JSON.List;
 import jakarta.validation.Constraint;
 import jakarta.validation.Payload;

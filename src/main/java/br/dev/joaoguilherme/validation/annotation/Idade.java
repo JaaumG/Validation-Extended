@@ -1,6 +1,6 @@
 package br.dev.joaoguilherme.validation.annotation;
 
-import br.dev.joaoguilherme.validation.IdadeValidator;
+import br.dev.joaoguilherme.validation.validators.IdadeValidator;
 import br.dev.joaoguilherme.validation.annotation.Idade.List;
 import jakarta.validation.Constraint;
 import jakarta.validation.Payload;

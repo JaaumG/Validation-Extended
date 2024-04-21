@@ -1,6 +1,6 @@
 package br.dev.joaoguilherme.validation.annotation;
 
-import br.dev.joaoguilherme.validation.TelefoneValidator;
+import br.dev.joaoguilherme.validation.validators.TelefoneValidator;
 import br.dev.joaoguilherme.validation.annotation.Telefone.List;
 import jakarta.validation.Constraint;
 import jakarta.validation.Payload;

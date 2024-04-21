@@ -1,6 +1,6 @@
 package br.dev.joaoguilherme.validation.annotation;
 
-import br.dev.joaoguilherme.validation.IPValidator;
+import br.dev.joaoguilherme.validation.validators.IPValidator;
 import br.dev.joaoguilherme.validation.annotation.IP.List;
 import jakarta.validation.Constraint;
 import jakarta.validation.Payload;

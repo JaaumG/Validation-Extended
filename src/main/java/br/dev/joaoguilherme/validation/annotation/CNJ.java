@@ -1,6 +1,6 @@
 package br.dev.joaoguilherme.validation.annotation;
 
-import br.dev.joaoguilherme.validation.CNJValidator;
+import br.dev.joaoguilherme.validation.validators.CNJValidator;
 import br.dev.joaoguilherme.validation.annotation.CNJ.List;
 import jakarta.validation.Constraint;
 import jakarta.validation.Payload;

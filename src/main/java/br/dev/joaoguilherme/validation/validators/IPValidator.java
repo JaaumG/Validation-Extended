@@ -1,4 +1,4 @@
-package br.dev.joaoguilherme.validation;
+package br.dev.joaoguilherme.validation.validators;
 
 import br.dev.joaoguilherme.validation.annotation.IP;
 import jakarta.validation.ConstraintValidator;

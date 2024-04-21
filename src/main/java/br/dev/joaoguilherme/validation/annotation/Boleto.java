@@ -1,6 +1,6 @@
 package br.dev.joaoguilherme.validation.annotation;
 
-import br.dev.joaoguilherme.validation.BoletoValidator;
+import br.dev.joaoguilherme.validation.validators.BoletoValidator;
 import br.dev.joaoguilherme.validation.annotation.Boleto.List;
 import jakarta.validation.Constraint;
 import jakarta.validation.Payload;

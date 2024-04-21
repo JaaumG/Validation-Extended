@@ -1,6 +1,6 @@
 package br.dev.joaoguilherme.validation.annotation;
 
-import br.dev.joaoguilherme.validation.NomeValidator;
+import br.dev.joaoguilherme.validation.validators.NomeValidator;
 import br.dev.joaoguilherme.validation.annotation.Nome.List;
 import jakarta.validation.Constraint;
 import jakarta.validation.Payload;

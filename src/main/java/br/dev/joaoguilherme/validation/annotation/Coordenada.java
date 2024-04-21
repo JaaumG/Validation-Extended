@@ -1,6 +1,6 @@
 package br.dev.joaoguilherme.validation.annotation;
 
-import br.dev.joaoguilherme.validation.CoordenadaValidator;
+import br.dev.joaoguilherme.validation.validators.CoordenadaValidator;
 import jakarta.validation.Constraint;
 import jakarta.validation.Payload;
 

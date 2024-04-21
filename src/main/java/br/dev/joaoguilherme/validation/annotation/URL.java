@@ -1,6 +1,6 @@
 package br.dev.joaoguilherme.validation.annotation;
 
-import br.dev.joaoguilherme.validation.URLValidator;
+import br.dev.joaoguilherme.validation.validators.URLValidator;
 import br.dev.joaoguilherme.validation.annotation.URL.List;
 import jakarta.validation.Constraint;
 import jakarta.validation.Payload;
