@@ -22,6 +22,7 @@ public @interface Coordenada {
     String message() default "Coordenada inválida";
 
     TipoCoordenada tipo() default TipoCoordenada.DD_COORDINATE_REGEX;
+
     enum TipoCoordenada {
         DD_COORDINATE_REGEX("^(-?\\d+\\.\\d+)(\\s*,\\s*)?(-?\\d+\\.\\d+)$") {
             @Override
@@ -41,7 +42,6 @@ public @interface Coordenada {
             }
         },
         DMS_COORDINATE_REGEX("^(\\d{1,3})°(\\d{1,2})'(\\d{1,2}(\\.\\d+)?)?\"?([NSns])(\\s*,\\s*)?(\\d{1,3})°(\\d{1,2})'(\\d{1,2}(\\.\\d+)?)?\"?([WEwe])$") {
-
             boolean isInvalidLatitude(int degrees, int minutes, double seconds, String hemisphere) {
                 return degrees < 0 || degrees > 90 || minutes < 0 || minutes >= 60 || seconds < 0 || seconds >= 60 ||
                         (!hemisphere.equalsIgnoreCase("N") && !hemisphere.equalsIgnoreCase("S"));
@@ -51,6 +51,7 @@ public @interface Coordenada {
                 return degrees < 0 || degrees > 180 || minutes < 0 || minutes >= 60 || seconds < 0 || seconds >= 60 ||
                         (!hemisphere.equalsIgnoreCase("E") && !hemisphere.equalsIgnoreCase("W"));
             }
+
             @Override
             public boolean isValid(String coordenada) {
                 try {
@@ -78,7 +79,7 @@ public @interface Coordenada {
                 }
             }
         },
-        MGRS_COORDINATE_REGEX("^\\d{1,2}[^IO]{3}(\\d{10}|\\d{8}|\\d{6}|\\d{4}|\\d{2})$"){
+        MGRS_COORDINATE_REGEX("^\\d{1,2}[^IO]{3}(\\d{10}|\\d{8}|\\d{6}|\\d{4}|\\d{2})$") {
             @Override
             public boolean isValid(String coordenada) {
                 return true;
