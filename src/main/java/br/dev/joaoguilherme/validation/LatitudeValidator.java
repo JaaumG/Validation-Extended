@@ -4,26 +4,13 @@ import br.dev.joaoguilherme.validation.annotation.Latitude;
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
 
-public class LatitudeValidator implements ConstraintValidator<Latitude, String> {
-
-    private String regex;
-
+public class LatitudeValidator implements ConstraintValidator<Latitude, Double> {
     @Override
-    public void initialize(Latitude constraintAnnotation) {
-        regex = constraintAnnotation.regexp();
+    public boolean isValid(Double value, ConstraintValidatorContext context) {
+        return value == null || isValidLatitude(value);
     }
 
-    @Override
-    public boolean isValid(String value, ConstraintValidatorContext context) {
-        return value == null || (value.matches(regex)) && isValidLatitude(value);
-    }
-
-    private boolean isValidLatitude(String latitude) {
-        try {
-            double lat = Double.parseDouble(latitude);
-            return !(lat < -90) && !(lat > 90);
-        } catch (NumberFormatException e) {
-            return false;
-        }
+    private boolean isValidLatitude(Double latitude) {
+        return !(latitude < -90) && !(latitude > 90);
     }
 }
