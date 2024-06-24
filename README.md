@@ -31,9 +31,7 @@ Adicione a dependência ao seu arquivo `pom.xml`:
 Após adicionar a dependência ao seu projeto, você pode começar a utilizar as novas validações. Exemplo:
 
 ```java
-import com.seuprojeto.validation.extended.annotations.NovaValidacao;
-
-public class SeuModelo {
+public class SuaEntidade {
 
     @Validacao
     private String meuCampo;
